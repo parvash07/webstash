@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "https://webstash-i3o9.onrender.com/api/$1" }
+  ]
+}
