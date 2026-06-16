@@ -563,20 +563,20 @@ export default function PrivateDashboard({ userEmail, onLogout }) {
               </div>
 
               {/* Footer actions */}
-              <div className="flex items-center justify-between p-6 pt-4 border-t border-outline-variant/20">
-                <div className="flex items-center gap-3">
+              <div className="flex items-center justify-between p-4 md:p-6 pt-4 border-t border-outline-variant/20 gap-3">
+                <div className="flex items-center gap-1 md:gap-3">
                   <button 
                     onClick={() => { setViewingBookmark(null); openEditModal(viewingBookmark); }}
-                    className="text-[#d1c5b4]/70 hover:text-primary text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5 cursor-pointer transition-colors"
+                    className="text-[#d1c5b4]/70 hover:text-primary text-[10px] md:text-xs font-semibold uppercase tracking-wider flex items-center gap-1 md:gap-1.5 cursor-pointer transition-colors px-2 md:px-0"
                   >
-                    <Pencil className="w-3.5 h-3.5" />
+                    <Pencil className="w-3 h-3 md:w-3.5 md:h-3.5" />
                     <span>Edit</span>
                   </button>
                   <button 
                     onClick={() => handleDeleteBookmark(viewingBookmark.id, viewingBookmark.title)}
-                    className="text-red-400/50 hover:text-red-400 text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5 cursor-pointer transition-colors"
+                    className="text-red-400/50 hover:text-red-400 text-[10px] md:text-xs font-semibold uppercase tracking-wider flex items-center gap-1 md:gap-1.5 cursor-pointer transition-colors px-2 md:px-0"
                   >
-                    <Trash2 className="w-3.5 h-3.5" />
+                    <Trash2 className="w-3 h-3 md:w-3.5 md:h-3.5" />
                     <span>Delete</span>
                   </button>
                 </div>
@@ -584,10 +584,11 @@ export default function PrivateDashboard({ userEmail, onLogout }) {
                   href={viewingBookmark.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-primary text-on-primary hover:bg-primary-fixed px-5 py-2 rounded text-xs font-semibold uppercase tracking-wider transition-colors flex items-center gap-1.5"
+                  className="bg-primary text-on-primary hover:bg-primary-fixed px-3 md:px-5 py-1.5 md:py-2 rounded text-[10px] md:text-xs font-semibold uppercase tracking-wider transition-colors flex items-center gap-1 md:gap-1.5 shrink-0"
                 >
-                  <ExternalLink className="w-3.5 h-3.5" />
-                  <span>Open Source</span>
+                  <ExternalLink className="w-3 h-3 md:w-3.5 md:h-3.5" />
+                  <span className="hidden sm:inline">Open Source</span>
+                  <span className="sm:hidden">Open</span>
                 </a>
               </div>
             </motion.div>

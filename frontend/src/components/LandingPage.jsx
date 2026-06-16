@@ -49,24 +49,25 @@ export default function LandingPage({ onEnterAtelier }) {
     <div className="min-h-screen bg-[#131313] text-[#e5e2e1] overflow-x-hidden selection:bg-primary/20 selection:text-primary-fixed">
       {/* Landing Header */}
       <header className="w-full h-20 border-b border-outline-variant/30 sticky top-0 z-50 bg-[#131313]/85 backdrop-blur-xl">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-16 h-full flex items-center justify-between">
-          <span className="font-serif text-2xl font-bold tracking-tight text-primary">WebStash</span>
+        <div className="max-w-[1280px] mx-auto px-4 md:px-16 h-full flex items-center justify-between">
+          <span className="font-serif text-xl md:text-2xl font-bold tracking-tight text-primary shrink-0">WebStash</span>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3">
             <button 
               id="landing-signin-btn"
               onClick={() => onEnterAtelier('login')}
-              className="border border-primary-container/30 text-primary hover:border-primary px-4 py-2 rounded font-semibold text-xs tracking-widest transition-all duration-300 active:scale-95 hover:bg-primary/5 cursor-pointer flex items-center gap-2 uppercase font-mono"
+              className="border border-primary-container/30 text-primary hover:border-primary px-3 md:px-4 py-2 rounded font-semibold text-[10px] md:text-xs tracking-widest transition-all duration-300 active:scale-95 hover:bg-primary/5 cursor-pointer flex items-center gap-1 md:gap-2 uppercase font-mono"
             >
-              <LogIn className="w-3.5 h-3.5" />
-              <span>Sign In</span>
+              <LogIn className="w-3 h-3 md:w-3.5 md:h-3.5" />
+              <span className="hidden sm:inline">Sign In</span>
+              <span className="sm:hidden">Login</span>
             </button>
             <button 
               id="landing-register-btn"
               onClick={() => onEnterAtelier('register')}
-              className="bg-primary text-on-primary hover:bg-primary-fixed px-4 py-2 rounded font-semibold text-xs tracking-widest transition-all duration-300 active:scale-95 cursor-pointer flex items-center gap-2 uppercase font-mono shadow-[0_0_15px_rgba(212,168,75,0.15)]"
+              className="bg-primary text-on-primary hover:bg-primary-fixed px-3 md:px-4 py-2 rounded font-semibold text-[10px] md:text-xs tracking-widest transition-all duration-300 active:scale-95 cursor-pointer flex items-center gap-1 md:gap-2 uppercase font-mono shadow-[0_0_15px_rgba(212,168,75,0.15)]"
             >
-              <UserPlus className="w-3.5 h-3.5" />
+              <UserPlus className="w-3 h-3 md:w-3.5 md:h-3.5" />
               <span>Register</span>
             </button>
           </div>
